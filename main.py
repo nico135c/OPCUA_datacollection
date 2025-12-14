@@ -1,12 +1,16 @@
 from OPCUA_handler import OPCUAFestoModule, OPCUAHandler
+from export_logs_to_excel import export_logs
+
+db_credentials = "database_credentials.txt"
 
 modules = [
-    OPCUAFestoModule("Bottom Cover Module", '172.20.3.1'),
-    OPCUAFestoModule("Error Module", '172.20.1.1'),
-    OPCUAFestoModule("Camera Module", '172.20.5.1'),
-    OPCUAFestoModule("Robot Cell Module", '172.20.4.1'),
-    OPCUAFestoModule("Top Cover Module", '172.20.11.1'),
-    OPCUAFestoModule("Drill Station Module", '172.20.16.1')
+    OPCUAFestoModule("Bottom Cover Module", '172.20.3.1', db_credentials),
+    OPCUAFestoModule("Error Module", '172.20.13.1', db_credentials),
+    OPCUAFestoModule("Camera Module", '172.20.5.1', db_credentials),
+    OPCUAFestoModule("Robot Cell Module", '172.20.4.1', db_credentials),
+    OPCUAFestoModule("Top Cover Module", '172.20.11.1', db_credentials),
+    OPCUAFestoModule("Drill Station Module", '172.20.16.1', db_credentials),
+    OPCUAFestoModule("End Module", '172.20.1.1', db_credentials)
 ]
 
 if __name__ == "__main__":
