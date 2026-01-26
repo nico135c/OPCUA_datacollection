@@ -134,3 +134,5 @@ def export_single_database_to_excel(
 
     cur.close()
     conn.close()
+
+export_logs()
